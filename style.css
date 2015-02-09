@@ -1,0 +1,42 @@
+#keskittaja{
+	margin-right: auto;
+	margin-left: auto;
+	width:1230px;
+	padding-left: 10px;
+
+}
+
+#ruokalista
+{
+   	float:left;
+   	width:400px;
+	height:500px;
+	background-color: ;
+	border: 2px solid #000;
+	font-size: 18px;
+	padding-left: 10px;
+}
+#ruokalista p
+{
+	padding-left:10px;  
+	}
+#thisday{
+	margin-left: 10px;
+	width:400px;
+	height:500px;
+	float:left;
+	background-color: ;
+	border: 2px solid #000;
+	font-size: 28px;
+	
+	padding-left: 10px;
+}
+
+#lista2{border: 2px solid #000;
+	width:300px;
+	height: 500px;
+	position: absolute;
+	left: 1185px;
+	font-size: 18px;
+	padding-left: 10px;
+}
