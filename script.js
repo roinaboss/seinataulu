@@ -309,13 +309,49 @@ var ajax = function(day,month,weekday)
 {
 $.get( "ajax.php?date=" + day + "&month=" + month, function( data ) {
   if (data.courses.length===6) {
+  if(data.courses[0].properties==="")
+  {
+    ruoka1 = data.courses[0].title_fi;
+  }
+  else{
+    ruoka1 = data.courses[0].title_fi + " " +  data.courses[0].properties;
+  }
+  if(data.courses[1].properties==="")
+  {
+    ruoka2 = data.courses[1].title_fi;
+  }
+  else{
+    ruoka2 = data.courses[1].title_fi + " " +  data.courses[1].properties;
+  }
+  if(data.courses[2].properties==="")
+  {
+    ruoka3 = data.courses[2].title_fi;
+  }
+  else{
+    ruoka3 = data.courses[2].title_fi + " " +  data.courses[2].properties;
+  }
+  if(data.courses[3].properties==="")
+  {
+    ruoka4 = data.courses[3].title_fi;
+  }
+  else{
+    ruoka4 = data.courses[3].title_fi + " " +  data.courses[3].properties;
+  }if(data.courses[4].properties==="")
+  {
+    ruoka5 = data.courses[4].title_fi;
+  }
+  else{
+    ruoka5 = data.courses[4].title_fi + " " +  data.courses[4].properties;
+  }
+  if(data.courses[5].properties==="")
+  {
+    ruoka6 = data.courses[5].title_fi;
+  }
+  else{
+    ruoka6 = data.courses[5].title_fi + " " +  data.courses[5].properties;
+  }
 
-  ruoka1 = data.courses[0].title_fi + " " +  data.courses[0].properties;
-  ruoka2 = data.courses[1].title_fi  + " " +  data.courses[1].properties;
-  ruoka3 = data.courses[2].title_fi  + " " +  data.courses[2].properties;
-  ruoka4 = data.courses[3].title_fi  + " " +  data.courses[3].properties;
-  ruoka5 = data.courses[4].title_fi  + " " +  data.courses[4].properties;
-  ruoka6 = data.courses[5].title_fi  + " " +  data.courses[5].properties;
+  
   ruoka = [ruoka1,ruoka2,ruoka3,ruoka4,ruoka5,ruoka6];
   
 callback(ruoka,weekday);
@@ -324,11 +360,42 @@ callback(ruoka,weekday);
   }
   
   if (data.courses.length===5) {
-   ruoka1 = data.courses[0].title_fi + " " +  data.courses[0].properties;
-  ruoka2 = data.courses[1].title_fi  + " " +  data.courses[1].properties;
-  ruoka3 = data.courses[2].title_fi  + " " +  data.courses[2].properties;
-  ruoka4 = data.courses[3].title_fi  + " " +  data.courses[3].properties;
-  ruoka5 = data.courses[4].title_fi  + " " +  data.courses[4].properties;
+    if(data.courses[0].properties==="")
+  {
+    ruoka1 = data.courses[0].title_fi;
+  }
+  else{
+    ruoka1 = data.courses[0].title_fi + " " +  data.courses[0].properties;
+  }
+  if(data.courses[1].properties==="")
+  {
+    ruoka2 = data.courses[1].title_fi;
+  }
+  else{
+    ruoka2 = data.courses[1].title_fi + " " +  data.courses[1].properties;
+  }
+  if(data.courses[2].properties==="")
+  {
+    ruoka3 = data.courses[2].title_fi;
+  }
+  else{
+    ruoka3 = data.courses[2].title_fi + " " +  data.courses[2].properties;
+  }
+  if(data.courses[3].properties==="")
+  {
+    ruoka4 = data.courses[3].title_fi;
+  }
+  else{
+    ruoka4 = data.courses[3].title_fi + " " +  data.courses[3].properties;
+  }if(data.courses[4].properties==="")
+  {
+    ruoka5 = data.courses[4].title_fi;
+  }
+  else{
+    ruoka5 = data.courses[4].title_fi + " " +  data.courses[4].properties;
+  }
+  
+   
   ruoka = [ruoka1,ruoka2,ruoka3,ruoka4,ruoka5];
  
 
