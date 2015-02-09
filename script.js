@@ -1,7 +1,7 @@
 var ruoka1,ruoka2,ruoka3,ruoka4,ruoka5,ruoka6;
   var ruoka = [];
 var index;
-
+console.log('Matti!');
 
 
 var rmaanantai, rtiistai, rkeskiviikko, rtorstai, rperjantai =[];
