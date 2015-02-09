@@ -102,7 +102,10 @@ if (weekday=="Keskiviikko"){
       
       
   }
-if (ruokalista_array.length==5 ) {
+  $.each(ruokalista_array, function( index, value ) {
+  $("#keski").html($("#keski").html() + value + '<br />');
+});
+/*if (ruokalista_array.length==5 ) {
               $("#keski").html($("#keski").html() + ruokalista_array[0] + '<br />');
               $("#keski").html($("#keski").html() + ruokalista_array[1] + '<br />');
               $("#keski").html($("#keski").html() + ruokalista_array[2] + '<br />');
@@ -119,6 +122,7 @@ if (ruokalista_array.length==5 ) {
               $("#keski").html($("#keski").html() + ruokalista_array[5] + '<br />');
 
             };
+            */
             if (dayname==="Keskiviikko") {
               $("#keski").html('');
             };
@@ -128,23 +132,9 @@ if (ruokalista_array.length==5 ) {
           
           $("#keskiviikonruokalista").html(weekday + '<br>');
           
-           if (ruokalista_array.length==5 ) {
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[0] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[1] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[2] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[3] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[4] + '<br />');
-                
-              };
-              if (ruokalista_array.length == 6) {
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[0] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[1] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[2] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[3] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[4] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[5] + '<br />');
-
-              };   
+           $.each(ruokalista_array, function( index, value ) {
+  $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + value + '<br />');
+});
 
               
              
@@ -155,23 +145,9 @@ if (ruokalista_array.length==5 ) {
           
           $("#keskiviikonruokalista").html(weekday + '<br>');
           
-           if (ruokalista_array.length==5 ) {
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[0] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[1] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[2] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[3] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[4] + '<br />');
-                
-              };
-              if (ruokalista_array.length == 6) {
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[0] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[1] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[2] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[3] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[4] + '<br />');
-                $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + ruokalista_array[5] + '<br />');
-
-              };   
+           $.each(ruokalista_array, function( index, value ) {
+  $("#keskiviikonruokalista").html($("#keskiviikonruokalista").html() + value + '<br />');
+}); 
         }
         if(dayname==="Tiistai")
         {
@@ -179,23 +155,9 @@ if (ruokalista_array.length==5 ) {
           
           $("#keski").html(weekday + '<br>');
           
-           if (ruokalista_array.length==5 ) {
-                $("#keski").html($("#keski").html() + ruokalista_array[0] + '<br />');
-                $("#keski").html($("#keski").html() + ruokalista_array[1] + '<br />');
-                $("#keski").html($("#keski").html() + ruokalista_array[2] + '<br />');
-                $("#keski").html($("#keski").html() + ruokalista_array[3] + '<br />');
-                $("#keski").html($("#keski").html() + ruokalista_array[4] + '<br />');
-                
-              };
-              if (ruokalista_array.length == 6) {
-                $("#keski").html($("#keski").html() + ruokalista_array[0] + '<br />');
-                $("#keski").html($("#keski").html() + ruokalista_array[1] + '<br />');
-                $("#keski").html($("#keski").html() + ruokalista_array[2] + '<br />');
-                $("#keski").html($("#keski").html() + ruokalista_array[3] + '<br />');
-                $("#keski").html($("#keski").html() + ruokalista_array[4] + '<br />');
-                $("#keski").html($("#keski").html() + ruokalista_array[5] + '<br />');
-
-              };   
+           $.each(ruokalista_array, function( index, value ) {
+  $("#keski").html($("#keski").html() + value + '<br />');
+});  
         }
 
 }
