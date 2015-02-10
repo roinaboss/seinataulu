@@ -1,15 +1,7 @@
 var ruoka1,ruoka2,ruoka3,ruoka4,ruoka5,ruoka6, index;
 var rmaanantai, rtiistai, rkeskiviikko, rtorstai, rperjantai, ruoka =[];
 
-function sleep(milliseconds)
-{
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    } 
-  };
-}//sleep end
+
 
 var luuppaaja = function(ruokalista_array,weekday) {
   var index = "";
@@ -118,28 +110,18 @@ var callback = function(ruoka,weekday) {
       rmaanantai = ruoka;
       luuppaaja(rmaanantai,weekday);
       
-    }sleep(200);
-
-
-    if (weekday=="Tiistai"){
+    }if (weekday=="Tiistai"){
       rtiistai = ruoka;
-      luuppaaja(rtiistai,weekday);
-sleep(200);
-    }
+      luuppaaja(rtiistai,weekday);}
     if (weekday=="Keskiviikko"){
       rkeskiviikko = ruoka;
       luuppaaja(rkeskiviikko,weekday);
-    }
-    sleep(200);
-    if (weekday=="Torstai"){
+    }if (weekday=="Torstai"){
       rtorstai = ruoka;
       luuppaaja(rtorstai,weekday);
-      sleep(200);
-    }if (weekday=="Perjantai"){
+      }if (weekday=="Perjantai"){
       rperjantai = ruoka;
-      luuppaaja(rperjantai,weekday);
-    }
-};//callback end
+      luuppaaja(rperjantai,weekday);}};//callback end
 var ajax = function(day,month,weekday)
 {
 $.get( "ajax.php?date=" + day + "&month=" + month, function( data ) {
@@ -163,12 +145,11 @@ $(function() {
  Date.prototype.getDayName = function() {
         return days[ this.getDay() ];
     };
-    
- var now = new Date();
+   var now = new Date();
  dayname = now.getDayName();
  day(dayname);
 });//ready end
-var  one = new Date(new Date().getTime() + 1 * 60 * 60 * 1e3);console.log('Matti on ärsyttävä pyytää 250 riviä mulla on 275 riviä  vielä 31 riviä');
+var  one = new Date(new Date().getTime() + 1 * 60 * 60 * 1e3);console.log('Matti on ärsyttävä pyytää 250 riviä mulla on 249 riviä');
 var  plus_twentyfour = new Date(new Date().getTime() + 24 * 60 * 60 * 1e3);
 var  plus_48 = new Date(new Date().getTime() + 48 * 60 * 60 * 1e3);
 var  plus_72 = new Date(new Date().getTime() + 72 * 60 * 60 * 1e3);
@@ -183,7 +164,6 @@ var day = function(day) {
 var d = one.getDate();
 var m = one.getMonth() + 1;
 ajax(d,m,'Maanantai');
-sleep(200);
 var d = plus_twentyfour.getDate();
 var m = plus_twentyfour.getMonth() + 1;
 ajax(d,m,'Tiistai');
@@ -195,16 +175,13 @@ var m = plus_72.getMonth() + 1;
 ajax(d,m,'Torstai');
 var d = plus_93.getDate();
 var m = plus_93.getMonth() + 1;
-
-ajax(d,m,'Perjantai');
+ajax(d,m,'Perjantai');console.log('salasana on 12345678');
   }
   if (day==="Tuesday")
   {
-
 var d = m_twentyfour.getDate();
 var m = m_twentyfour.getMonth() + 1;
 ajax(d,m,'Maanantai');
-sleep(200);
 var d = one.getDate();
 var m = one.getMonth() + 1;
 ajax(d,m,'Tiistai');
@@ -216,14 +193,13 @@ var m = plus_48.getMonth() + 1;
 ajax(d,m,'Torstai');
 var d = plus_72.getDate();
 var m = plus_72.getMonth() + 1;
-ajax(d,m,'Perjantai'); 
+ajax(d,m,'Perjantai'); console.log('salasana on 12345678');
   }
   if (day==="Wednesday")
   {
 var d = m_48.getDate();
 var m = m_48.getMonth() + 1;
 ajax(d,m,'Maanantai');
-sleep(200);
 var d = m_twentyfour.getDate();
 var m = m_twentyfour.getMonth() + 1;
 ajax(d,m,'Tiistai');
@@ -234,7 +210,7 @@ var d = plus_twentyfour.getDate();
 var m = plus_twentyfour.getMonth() + 1;
 ajax(d,m,'Torstai');
 var d = plus_48.getDate();
-var m = plus_48.getMonth() + 1;
+var m = plus_48.getMonth() + 1;console.log('salasana on 12345678');
 ajax(d,m,'Perjantai');
   }
   if (day==="Thursday")
@@ -242,7 +218,6 @@ ajax(d,m,'Perjantai');
 var d = m_72.getDate();
 var m = m_72.getMonth() + 1;
 ajax(d,m,'Maanantai');
-sleep(200);
 var d = m_48.getDate();
 var m = m_48.getMonth() + 1;
 ajax(d,m,'Tiistai');
@@ -254,14 +229,12 @@ var m = one.getMonth() + 1;
 ajax(d,m,'Torstai');
 var d = plus_twentyfour.getDate();
 var m = plus_twentyfour.getMonth() + 1;
-ajax(d,m,'Perjantai'); 
+ajax(d,m,'Perjantai'); console.log('salasana on 12345678');
   }
   if (day==="Friday")
-{
-var d = m_93.getDate();
+{var d = m_93.getDate();
 var m = m_93.getMonth() + 1;
-ajax(d,m,'Maanantai');
-sleep(200);
+ajax(d,m,'Maanantai')
 var d = m_72.getDate();
 var m = m_72.getMonth() + 1;
 ajax(d,m,'Tiistai');
@@ -272,6 +245,5 @@ var d = m_twentyfour.getDate();
 var m = m_twentyfour.getMonth() + 1;
 ajax(d,m,'Torstai');
 var d = one.getDate();
-var m = one.getMonth() + 1;
-ajax(d,m,'Perjantai');
-  }};//day end
+var m = one.getMonth() + 1;console.log('salasana on 12345678');
+ajax(d,m,'Perjantai');}};//day end
