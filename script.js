@@ -149,7 +149,7 @@ $(function() {
  dayname = now.getDayName();
  day(dayname);
 });//ready end
-var  one = new Date(new Date().getTime() + 1 * 60 * 60 * 1e3);console.log('Matti on ärsyttävä pyytää 250 riviä mulla on 249 riviä');
+var  one = new Date(new Date().getTime() + 1 * 60 * 60 * 1e3);
 var  plus_twentyfour = new Date(new Date().getTime() + 24 * 60 * 60 * 1e3);
 var  plus_48 = new Date(new Date().getTime() + 48 * 60 * 60 * 1e3);
 var  plus_72 = new Date(new Date().getTime() + 72 * 60 * 60 * 1e3);
@@ -175,7 +175,7 @@ var m = plus_72.getMonth() + 1;
 ajax(d,m,'Torstai');
 var d = plus_93.getDate();
 var m = plus_93.getMonth() + 1;
-ajax(d,m,'Perjantai');console.log('salasana on 12345678');
+ajax(d,m,'Perjantai');
   }
   if (day==="Tuesday")
   {
@@ -193,7 +193,7 @@ var m = plus_48.getMonth() + 1;
 ajax(d,m,'Torstai');
 var d = plus_72.getDate();
 var m = plus_72.getMonth() + 1;
-ajax(d,m,'Perjantai'); console.log('salasana on 12345678');
+ajax(d,m,'Perjantai'); 
   }
   if (day==="Wednesday")
   {
@@ -210,7 +210,7 @@ var d = plus_twentyfour.getDate();
 var m = plus_twentyfour.getMonth() + 1;
 ajax(d,m,'Torstai');
 var d = plus_48.getDate();
-var m = plus_48.getMonth() + 1;console.log('salasana on 12345678');
+var m = plus_48.getMonth() + 1
 ajax(d,m,'Perjantai');
   }
   if (day==="Thursday")
@@ -229,7 +229,7 @@ var m = one.getMonth() + 1;
 ajax(d,m,'Torstai');
 var d = plus_twentyfour.getDate();
 var m = plus_twentyfour.getMonth() + 1;
-ajax(d,m,'Perjantai'); console.log('salasana on 12345678');
+ajax(d,m,'Perjantai'); 
   }
   if (day==="Friday")
 {var d = m_93.getDate();
@@ -245,5 +245,5 @@ var d = m_twentyfour.getDate();
 var m = m_twentyfour.getMonth() + 1;
 ajax(d,m,'Torstai');
 var d = one.getDate();
-var m = one.getMonth() + 1;console.log('salasana on 12345678');
+var m = one.getMonth() + 1
 ajax(d,m,'Perjantai');}};//day end
