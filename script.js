@@ -204,7 +204,7 @@ var d = m_twentyfour.getDate();
 var m = m_twentyfour.getMonth() + 1;
 ajax(d,m,'Tiistai');
 var d = one.getDate();
-var m = day.getMonth() + 1;
+var m = one.getMonth() + 1;
 ajax(d,m,'Keskiviikko');
 var d = plus_twentyfour.getDate();
 var m = plus_twentyfour.getMonth() + 1;
