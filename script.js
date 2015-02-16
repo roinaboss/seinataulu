@@ -124,7 +124,7 @@ var callback = function(ruoka,weekday) {
       luuppaaja(rperjantai,weekday);}};//callback end
 var ajax = function(day,month,weekday)
 {
-$.get( "ajax.php?date=" + day + "&month=" + month, function( data ) {
+$.get( "ajax.php?date=" + day + "&month=" + month + "&data=json", function( data ) {
  $.each(data.courses, function( index, value ) {
   
   if(value.properties==="")
