@@ -70,7 +70,7 @@ if (dayname==="Keskiviikko") {
 }
 }if (weekday=="Torstai"){
     $("#torstainruokalista").html(weekday + '<br>');
-if (dayname===weekday){$("#thisday").html("<u>"+weekday + '</u><br><br>');         $("#torstainruokalista").html('');
+if (dayname===weekday){$("#thisday").html("<u>"+weekday + '</u><br>');         $("#torstainruokalista").html('');
 }for (index = 0; index < ruokalista_array.length; ++index) {
   if (dayname===weekday){$("#thisday").html($("#thisday").html() + ruokalista_array[index] + '<br />');$("#torstainruokalista").html('');}
 else{$("#torstainruokalista").html($("#torstainruokalista").html() + ruokalista_array[index] + '<br />');
