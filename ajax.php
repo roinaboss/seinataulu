@@ -1,5 +1,5 @@
 <?php
-header('X-Powered-by: php');
+header('X-Powered-By: php');
 header('X-data: ' $_GET["data"]);
 
 
