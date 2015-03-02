@@ -1,5 +1,6 @@
 <?php
 header('X-Powered-by: php');
+header('X-data: ruokalista');
 if ($_GET["data"]==="json") {
 	if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])) {
       $if_modified_since = preg_replace('/;.*$/', '',   $_SERVER['HTTP_IF_MODIFIED_SINCE']);
