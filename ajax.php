@@ -1,6 +1,6 @@
 <?php
 header('X-Powered-By: php');
-header('X-data: ' $_GET["data"]);
+
 
 
 if ($_GET["data"]==="json") {
@@ -19,7 +19,7 @@ if ($_GET["data"]==="json") {
 header("Last-Modified: $gmdate_mod");
 
  header('Expires: ' . gmdate('D, d M Y H:i:s', time() + (60*60*24*45)) . ' GMT');
-
+ header('Access-Control-Allow-Origin: *');  
 header('Content-type: application/json; charset=utf-8');
 
 
