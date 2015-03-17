@@ -127,7 +127,7 @@ var ajax = function(day,month,weekday)
 $.get( "ajax.php?date=" + day + "&month=" + month + "&data=json", function( data ) {
  $.each(data.courses, function( index, value ) {
   
-  if(value.properties==="")
+  if(typeof value.properties === 'undefined' || value.properties === null )
   {
     ruoka[index] = value.title_fi;
   }
